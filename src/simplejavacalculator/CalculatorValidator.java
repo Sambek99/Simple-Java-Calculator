@@ -1,4 +1,4 @@
-package simplejavacalculator;
+    package simplejavacalculator;
 
 public class CalculatorValidator {
 

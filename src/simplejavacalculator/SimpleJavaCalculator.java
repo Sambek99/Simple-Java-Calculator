@@ -4,10 +4,14 @@ public class SimpleJavaCalculator {
 
     public static void main(String[] args) {
         try {
-            CalculatorUI calculatorUI = new CalculatorUI(); // Inicializa la interfaz de usuario
-            calculatorUI.setVisible(true); // Hace visible la ventana de la calculadora
+            Calculator calculator = new Calculator();
+            
+            // Ejemplo de uso de la calculadora
+            System.out.println("Suma: " + calculator.calculate("add", 5.0, 3.0));
+            System.out.println("Coseno: " + calculator.calculate("cos", 60.0));
+            System.out.println("Raíz cuadrada: " + calculator.calculate("sqrt", 16.0));
         } catch (Exception e) {
-            System.out.println("Error al iniciar la calculadora: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
         }
     }
 }

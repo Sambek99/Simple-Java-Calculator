@@ -1,6 +1,14 @@
-public class UnaryCalculator implements Operation{
+package simplejavacalculator;
 
-    public Double calculate(Operation operation, Double num) {
-        return operation.execute(num, 0.0); // Para operaciones unarias, el segundo número es innecesario.
+public class UnaryCalculator implements CalculatorService {
+
+    @Override
+    public Double calculateBinary(BinaryOperation operation, Double num1, Double num2) {
+        throw new UnsupportedOperationException("UnaryCalculator no soporta operaciones binarias.");
+    }
+
+    @Override
+    public Double calculateUnary(UnaryOperation operation, Double num) {
+        return operation.execute(num);
     }
 }
